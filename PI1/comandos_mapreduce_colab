@@ -1,16 +1,24 @@
 Comandos:
 
+//Faça o git clone dentro do repositório "/content" no google colab
+
 //Abaixo, execução do mapper versão1
 !rm -r /content/output/shakespeare
-!/usr/local/hadoop-3.3.4/bin/hadoop jar /usr/local/hadoop-3.3.4/share/hadoop/tools/lib/hadoop-streaming-3.3.4.jar -input /content/input/shakespeare/shakespeare.txt -output /content/output/shakespeare -file /content/mapper_v1.py  -file /content/reducer.py  -mapper 'python mapper_v1.py'  -reducer 'python reducer.py'
+!/usr/local/hadoop-3.3.4/bin/hadoop jar /usr/local/hadoop-3.3.4/share/hadoop/tools/lib/hadoop-streaming-3.3.4.jar -input /content/PI1/input/shakespeare/shakespeare.txt -output /content/PI1/output/shakespeare -file /content/PI1/codes/mapper_v1.py  -file /content/PI1/codes/reducer.py  -mapper 'python mapper_v1.py'  -reducer 'python reducer.py'
 
 //Abaixo, execução do mapper versão2
 !rm -r /content/output/shakespeare
-!/usr/local/hadoop-3.3.4/bin/hadoop jar /usr/local/hadoop-3.3.4/share/hadoop/tools/lib/hadoop-streaming-3.3.4.jar -input /content/input/shakespeare/shakespeare.txt -output /content/output/shakespeare -file /content/mapper_v2.py  -file /content/reducer.py  -mapper 'python mapper_v2.py'  -reducer 'python reducer.py'
+!/usr/local/hadoop-3.3.4/bin/hadoop jar /usr/local/hadoop-3.3.4/share/hadoop/tools/lib/hadoop-streaming-3.3.4.jar -input /content/PI1/input/shakespeare/shakespeare.txt -output /content/PI1/output/shakespeare -file /content/PI1/codes/mapper_v2.py  -file /content/PI1/codes/reducer.py  -mapper 'python mapper_v2.py'  -reducer 'python reducer.py'
 
 !cat /content/output/shakespeare/part-00000
 
 !rm -r /content/output/p2p-gnutella-08 
-!/usr/local/hadoop-3.3.4/bin/hadoop jar /usr/local/hadoop-3.3.4/share/hadoop/tools/lib/hadoop-streaming-3.3.4.jar -input /content/input/p2p-gnutella08/p2p-Gnutella08.txt -output /content/output/p2p-gnutella-08 -file /content/mapper.py  -file /content/reducer.py  -mapper 'python mapper.py'  -reducer 'python reducer.py'
+!/usr/local/hadoop-3.3.4/bin/hadoop jar /usr/local/hadoop-3.3.4/share/hadoop/tools/lib/hadoop-streaming-3.3.4.jar -input /content/PI1/input/p2p-gnutella08/p2p-Gnutella08.txt -output /content/PI1/output/p2p-gnutella-08 -file /content/PI1/codes/mapper_v1.py  -file /content/PI1/codes/reducer.py  -mapper 'python mapper_v1.py'  -reducer 'python reducer.py'
 
 !cat /content/output/p2p-gnutella-08/part-00000
+
+!rm -r /content/output/p2p-gnutella-08 
+!/usr/local/hadoop-3.3.4/bin/hadoop jar /usr/local/hadoop-3.3.4/share/hadoop/tools/lib/hadoop-streaming-3.3.4.jar -input /content/PI1/input/p2p-gnutella08/p2p-Gnutella08.txt -output /content/PI1/output/p2p-gnutella-08 -file /content/PI1/codes/mapper_v2.py  -file /content/PI1/codes/reducer.py  -mapper 'python mapper_v2.py'  -reducer 'python reducer.py'
+
+!cat /content/output/p2p-gnutella-08/part-00000
+
